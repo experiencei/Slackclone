@@ -7,7 +7,7 @@ function Header() {
     return (
         <HeaderContainer>
             <HeaderLeft>
-                <Avatar/>
+                <HeaderAvatar/>
             </HeaderLeft>
         </HeaderContainer>
     )
