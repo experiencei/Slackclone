@@ -34,6 +34,15 @@ const HeaderSearch = styled.div`
    padding: 0 50px;
    color: gray;
    border: 1px gray solid;
+
+   > input {
+       background-color: transparent;
+       border:none;
+       text-align: center;
+       min-width: 30vw;
+       outline: 0;
+       color: white;
+   }
 `;
 
 
