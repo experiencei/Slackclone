@@ -1,5 +1,5 @@
 import { InfoOutlined, StarBorderOutlined } from '@material-ui/icons';
-import React, { useRef } from 'react'
+import React, { useRef , useEffect } from 'react'
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { selectroomId } from '../../features/appSlice';
@@ -15,13 +15,22 @@ function Chat() {
    const [roomDetails] = 
    useDocument(roomId && db.collection("rooms").doc(roomId));
 
-const [roomMessages] = useCollection(
+const [roomMessages , loading ] = useCollection(
     roomId && 
     db.collection("rooms")
     .doc(roomId)
     .collection("messages")
     .orderBy("timestamp" , "asc")
-)
+);
+
+    useEffect(() => {
+        chatRef?.current?.scrollIntoView({
+            behavior: "smooth",
+        });
+    }, [roomId , loading])
+
+
+
     return (
         <ChatContainer>
 
