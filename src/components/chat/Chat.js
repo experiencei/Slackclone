@@ -43,7 +43,14 @@ const Header = styled.div`
 `;
 
 const HeaderLeft = styled.div`
-
+    >h4 {
+        display: flex;
+        text-transform: lowercase;
+    }
+    > h4 > .MuiSvgIcon-root {
+        margin-left: 10px;
+        font-size: 18px;
+    }
 `;
 
 const HeaderRight = styled.div`
