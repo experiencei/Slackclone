@@ -1,7 +1,14 @@
+import { Button } from '@material-ui/core'
 import React from 'react'
 import styled from 'styled-components'
 
 function Login() {
+  const SignIn = e => {
+      e.preventDefault();
+
+      
+  }
+
     return (
         <LoginContainer>
             <LoginInnerContainer>
@@ -10,6 +17,10 @@ function Login() {
                     SDDw7CnuoUGax6x9mTo7dd.jpg"
                     alt="slack"
                 />
+                <h1>Sign in to Experience IQ </h1>
+                <p>Exiq.slack.com</p>
+
+                <Button type="submit"  onClick={SignIn}>Sign in with Google</Button>
             </LoginInnerContainer>
         </LoginContainer>
     )
