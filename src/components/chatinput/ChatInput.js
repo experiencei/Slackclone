@@ -9,7 +9,8 @@ function ChatInput({ channelId , channnelName}) {
 
     const sendMessage = (e) => {
         e.preventDefault();
-         if(channelId) {
+
+         if(!channelId) {
              return false;
          }
 
@@ -20,7 +21,7 @@ function ChatInput({ channelId , channnelName}) {
              userImage : "https://images.pexels.com/photos/9935198/pexels-photo-9935198.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
          });
 
-         setInput("")
+         setInput("");
     }
 
 

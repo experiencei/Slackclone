@@ -33,7 +33,7 @@ function Chat() {
         </ChatMessages>
 
         <ChatInput
-             channelId ={roomId}    
+             channelId={roomId}    
 
         />
         </>
