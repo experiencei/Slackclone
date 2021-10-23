@@ -33,7 +33,7 @@ const [roomMessages , loading ] = useCollection(
 
     return (
         <ChatContainer>
-
+          {roomDetails && roomMessages }
         <>
         <Header>
             <HeaderLeft>
