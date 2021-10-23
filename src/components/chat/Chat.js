@@ -9,8 +9,8 @@ import { useCollection , useDocument} from 'react-firebase-hooks/firestore';
 
 function Chat() {
    const roomId = useSelector(selectroomId)
-   const [roomDetails] = useDocument(
-       roomId && db.collection("rooms").doc(roomId));
+   const [roomDetails] = 
+   useDocument(roomId && db.collection("rooms").doc(roomId));
 
 const [roomMessages] = useCollection(
     roomId && 
@@ -26,7 +26,7 @@ const [roomMessages] = useCollection(
         <Header>
             <HeaderLeft>
                    <h4>
-                   <strong>#Room-name</strong>
+                   <strong>#{roomDetails?.data().name}</strong>
                    </h4>
                    <StarBorderOutlined/>
             </HeaderLeft>
@@ -44,7 +44,7 @@ const [roomMessages] = useCollection(
         </ChatMessages>
 
         <ChatInput
-            channnelName={roomDetails?.data().name}
+             channnelName={roomDetails?.data().name}
              channelId={roomId}    
         />
         </>
