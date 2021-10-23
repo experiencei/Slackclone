@@ -4,8 +4,9 @@ import styled from 'styled-components';
 
 function Chat() {
     return (
-        <ChatContainer> 
+        <ChatContainer>
 
+        <>
         <Header>
             <HeaderLeft>
                    <h4>
@@ -21,12 +22,20 @@ function Chat() {
             </HeaderRight>
 
         </Header>
+
+        <ChatMessages>
+
+        </ChatMessages>
+        </>
         </ChatContainer>
     )
 }
 
 export default Chat;
 
+const ChatMessages = styled.div`
+
+`;
 
 const ChatContainer = styled.div`
    flex: 0.7;
