@@ -1,5 +1,5 @@
 import { InfoOutlined, StarBorderOutlined } from '@material-ui/icons';
-import React from 'react'
+import React, { useRef } from 'react'
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { selectroomId } from '../../features/appSlice';
@@ -9,6 +9,8 @@ import { useCollection , useDocument} from 'react-firebase-hooks/firestore';
 import Message from '../message/Message';
 
 function Chat() {
+
+   const chatRef = useRef(null)
    const roomId = useSelector(selectroomId)
    const [roomDetails] = 
    useDocument(roomId && db.collection("rooms").doc(roomId));
@@ -54,6 +56,7 @@ const [roomMessages] = useCollection(
                         />
                     )
                 })}
+                <ChatBottom ref={chatRef}/>
         </ChatMessages>
 
         <ChatInput
@@ -110,4 +113,8 @@ const HeaderRight = styled.div`
         margin-right: 5px;
         font-size: 16px;
     }
+`;
+
+const ChatBottom = styled.div`
+    padding-bottom: 200px;
 `;
