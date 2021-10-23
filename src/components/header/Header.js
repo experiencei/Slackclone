@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { AccessTime, HelpOutline, Search }  from '@material-ui/icons';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../firebase/firebase';
 
 
 function Header() {
@@ -12,7 +13,8 @@ function Header() {
         <HeaderContainer>
             <HeaderLeft>
                 <HeaderAvatar
-                   src={user?.photoUrl}
+                    onClick={() => auth.signOut()}
+                   src={user?.photoURL}
                    alt={user?.displayName}
                 />
                 <AccessTime />
