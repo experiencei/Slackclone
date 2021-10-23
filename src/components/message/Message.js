@@ -29,10 +29,17 @@ const MessageContainer = styled.div`
 
   > img {
       height: 50px;
-      border-radius: 8px;
+      border-radius: 6px;
   }
 `;
 
 const MessageInfo = styled.div`
+      padding-left: 10px;
 
+      > h4 > span {
+          color: gray;
+          font-weight: 300;
+          margin-left: 4px;
+          font-size: 10px;
+      }
 `;
