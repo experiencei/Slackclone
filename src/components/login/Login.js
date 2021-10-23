@@ -6,7 +6,7 @@ function Login() {
   const SignIn = e => {
       e.preventDefault();
 
-      
+
   }
 
     return (
@@ -20,7 +20,7 @@ function Login() {
                 <h1>Sign in to Experience IQ </h1>
                 <p>Exiq.slack.com</p>
 
-                <Button type="submit"  onClick={SignIn}>Sign in with Google</Button>
+                <Button onClick={SignIn}>Sign in with Google</Button>
             </LoginInnerContainer>
         </LoginContainer>
     )
@@ -46,5 +46,12 @@ const LoginInnerContainer = styled.div`
         object-fit: contain;
         height: 100px;
         margin-bottom: 40px;
+    }
+
+    >button {
+        margin-top: 50px;
+        text-transform: inherit !important;
+        background-color: #0a8d48 !important;
+        color: white; 
     }
 `;
