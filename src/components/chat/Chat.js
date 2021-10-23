@@ -26,6 +26,11 @@ function Chat() {
         <ChatMessages>
 
         </ChatMessages>
+
+        <ChatInput
+                 
+
+        />
         </>
         </ChatContainer>
     )
