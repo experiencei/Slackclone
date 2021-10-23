@@ -8,14 +8,15 @@ function App() {
 
 
         <Switch>
-          <Route path="/about">
+          {/* <Route path="/about">
             <About/>
           </Route>
           <Route path="/users">
             <Users/>
-          </Route>
-          <Route path="/">
-            <Home/>
+          </Route> */}
+          <Route exact path="/">
+            {/* <Home/> */}
+            <h1>Hello yihua</h1>
           </Route>
         </Switch>
         </>
