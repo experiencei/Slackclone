@@ -1,7 +1,7 @@
 import { Avatar } from '@material-ui/core';
 import React from 'react';
 import styled from 'styled-components';
-import { AccessTime, Search }  from '@material-ui/icons';
+import { AccessTime, HelpOutline, Search }  from '@material-ui/icons';
 
 
 function Header() {
@@ -18,6 +18,10 @@ function Header() {
                 <Search/>
                 <input  placeholder="Search Experience"/>
             </HeaderSearch>
+
+            <HeaderRight>
+                <HelpOutline/>
+            </HeaderRight>
         </HeaderContainer>
     )
 }
@@ -77,4 +81,10 @@ const HeaderAvatar = styled(Avatar)`
       opacity: 0.8;
   }
 
+`;
+
+const HeaderRight = styled.div`
+     flex: 0.3;
+     display: flex;
+     align-items: flex-end;
 `
