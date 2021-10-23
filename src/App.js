@@ -20,6 +20,12 @@ function App() {
                     SDDw7CnuoUGax6x9mTo7dd.jpg"
                     alt="slack"
                  />
+
+                 <Spinner
+                   name="ball-spin-fade-loader"
+                   color="purple"
+                   fadeIn="none"
+                 />
              </AppLoadingContent>
         </AppLoading>
      )
@@ -58,8 +64,19 @@ const AppBody = styled.div`
 `;
 
 const AppLoadingContent = styled.div`
+    text-align: center;
+   padding-bottom: 100px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 
+   > img {
+     height: 100px;
+     padding: 20px;
+     
+   }
 `;
 const AppLoading = styled.div`
-
+   
 `;
