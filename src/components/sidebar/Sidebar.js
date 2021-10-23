@@ -22,7 +22,9 @@ export default Sidebar
 
 
 const SidebarContainer = styled.div`
-
+    color: white;
+    background-color: var(--slack-color);
+    flex: 0.3;
 `;
 
 const SidebarHeader = styled.div`
