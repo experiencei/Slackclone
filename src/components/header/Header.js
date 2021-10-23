@@ -22,6 +22,11 @@ export default Header;
 
 const HeaderContainer = styled.div`
   display: flex;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
 `;
 
 const HeaderLeft = styled.div`
@@ -37,4 +42,11 @@ const HeaderLeft = styled.div`
      }
 `;
 
-const HeaderAvatar = styled(Avatar)``
+const HeaderAvatar = styled(Avatar)`
+  cursor: pointer;
+
+  :hover {
+      opacity: 0.8;
+  }
+
+`
