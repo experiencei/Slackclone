@@ -1,11 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
+
 
 function Header() {
     return (
-        <div>
+        <HeaderContainer>
             
-        </div>
+        </HeaderContainer>
     )
 }
 
-export default Header
+export default Header;
+
+
+const HeaderContainer = styled.div`
+
+
+`
