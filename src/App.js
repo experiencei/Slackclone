@@ -6,6 +6,7 @@ import Header from './components/header/Header';
 import Sidebar from './components/sidebar/Sidebar';
 import { useAuthState }  from "react-firebase-hooks/auth";
 import { auth } from './components/firebase/firebase';
+import Login from './components/login/Login';
 
 
 function App() {
