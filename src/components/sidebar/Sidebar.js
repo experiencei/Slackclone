@@ -7,10 +7,10 @@ function Sidebar() {
         <SidebarContainer>
             <SidebarHeader>
                 <SidebarInfo>
-                    <h2></h2>
+                    <h2> Experience of nig</h2>
                     <h3>
                         <FiberManualRecord/>
-
+                         Experience Iq
                     </h3>
                 </SidebarInfo>
             </SidebarHeader>
