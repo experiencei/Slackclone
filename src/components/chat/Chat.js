@@ -69,6 +69,7 @@ const [roomMessages , loading ] = useCollection(
         </ChatMessages>
 
         <ChatInput
+             chatRef={chatRef}
              channnelName={roomDetails?.data().name}
              channelId={roomId}    
         />
