@@ -1,4 +1,4 @@
-import { Apps, BookmarkBorder, Create, Drafts, ExpandLess, ExpandMore, FiberManualRecord, FileCopy, Inbox, InsertComment, PeopleAlt } from '@material-ui/icons';
+import { Add, Apps, BookmarkBorder, Create, Drafts, ExpandLess, ExpandMore, FiberManualRecord, FileCopy, Inbox, InsertComment, PeopleAlt } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
 import SidebarOption from '../sidebarOption/SidebarOption';
@@ -27,6 +27,8 @@ function Sidebar() {
             <hr/>
             
             <SidebarOption Icon={ExpandMore}  title="Channels"/>
+            <hr/>
+            <SidebarOption Icon={Add}  addChannelOption  title="Add Channel"/>
         </SidebarContainer>
     )
 }
