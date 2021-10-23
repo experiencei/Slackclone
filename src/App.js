@@ -11,7 +11,19 @@ import Login from './components/login/Login';
 
 function App() {
   const [ user , loading] = useAuthState(auth)
-
+   if (loading) {
+     return (
+        <AppLoading>
+             <AppLoadingContent>
+                 <img 
+                    src="https://cdn.mos.cms.futurecdn.net/
+                    SDDw7CnuoUGax6x9mTo7dd.jpg"
+                    alt="slack"
+                 />
+             </AppLoadingContent>
+        </AppLoading>
+     )
+   }
   return (
     <div className="app">
       <Router>
@@ -43,4 +55,11 @@ export default App;
 const AppBody = styled.div`
    display: flex;
    height: 100vh;
+`;
+
+const AppLoadingContent = styled.div`
+
+`;
+const AppLoading = styled.div`
+
 `;

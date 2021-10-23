@@ -1,5 +1,6 @@
 import { Add, Apps, BookmarkBorder, Create, Drafts, ExpandLess, ExpandMore, FiberManualRecord, FileCopy, Inbox, InsertComment, PeopleAlt } from '@material-ui/icons';
 import React from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import styled from 'styled-components';
 import { db } from '../firebase/firebase';
@@ -7,7 +8,7 @@ import SidebarOption from '../sidebarOption/SidebarOption';
 
 function Sidebar() {
     const [channels , loading , error] = useCollection(db.collection("rooms"))
-
+    const [user] = useAuthState(auth)
 
     return (
         <SidebarContainer>
