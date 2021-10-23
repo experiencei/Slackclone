@@ -1,12 +1,12 @@
 import { Button } from '@material-ui/core'
 import React from 'react'
 import styled from 'styled-components'
+import { auth, provider } from '../firebase/firebase';
 
 function Login() {
   const SignIn = e => {
       e.preventDefault();
-
-
+    auth.signInWithPopup(provider).catch(err => {alert(err)});
   }
 
     return (
