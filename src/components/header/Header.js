@@ -27,6 +27,8 @@ const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
+  background-color: var( --slack-color );
+  color: white;
 `;
 
 const HeaderLeft = styled.div`
