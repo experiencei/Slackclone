@@ -33,8 +33,8 @@ const [roomMessages , loading ] = useCollection(
 
     return (
         <ChatContainer>
-          {roomDetails && roomMessages }
-        <>
+          {roomDetails && roomMessages && (
+            <>
         <Header>
             <HeaderLeft>
                    <h4>
@@ -74,6 +74,8 @@ const [roomMessages , loading ] = useCollection(
              channelId={roomId}    
         />
         </>
+          )}
+       
         </ChatContainer>
     )
 }
