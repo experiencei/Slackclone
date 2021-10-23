@@ -1,4 +1,4 @@
-import { FiberManualRecord } from '@material-ui/icons';
+import { Create, FiberManualRecord } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
 
@@ -13,6 +13,7 @@ function Sidebar() {
                          Experience Iq
                     </h3>
                 </SidebarInfo>
+                <Create/>
             </SidebarHeader>
         </SidebarContainer>
     )
@@ -31,8 +32,32 @@ const SidebarContainer = styled.div`
 `;
 
 const SidebarHeader = styled.div`
+    display: flex;
+    border-bottom : 1px solid #49274b;
+    /* padding-bottom :  10px; */
+    padding: 13px;
 
+    > .MuiSvgIcon-root {
+          background-color: white;
+          color: #49274b;
+          padding:  8px;
+          font-size: 18px;
+          border-radius : 999px;
+     }
 `;
 const SidebarInfo = styled.div`
+  flex: 1;
+  > h2 {
+      font-size: 15px;
+      font-weight: 900;
+      margin-bottom: 5px;
+  }
 
+
+  > h3 {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 400;
+  }
 `;
