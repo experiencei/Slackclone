@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import firebase from 'firebase/compat/app';
 
 function ChatInput({ channelId , channnelName}) {
-   const[ input , setInput] = useState('');
+   const[input , setInput] = useState('');
 
     const sendMessage = (e) => {
         e.preventDefault();
@@ -31,7 +31,7 @@ function ChatInput({ channelId , channnelName}) {
                 <input
                  onChange={ e => setInput(e.target.value)}
                  value={input}
-                 placeholder={`Message #${channelId}`}/>
+                 placeholder={`Message #${channnelName}`}/>
                 <Button hidden type="submit" onClick={sendMessage}>
                     SEND
                 </Button>
