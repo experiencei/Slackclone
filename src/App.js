@@ -7,12 +7,15 @@ function App() {
       <Router>
         <>
 
-
-        <Switch>
-          <Route exact path="/">
-            <Header/>
-          </Route>
-        </Switch>
+        <Header/>
+        <AppBody>
+          <Switch>
+            <Route exact path="/">
+              
+            </Route>
+          </Switch>
+        </AppBody>
+       
         </>
       </Router>
     </div>
