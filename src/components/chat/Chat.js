@@ -4,10 +4,12 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { selectroomId } from '../../features/appSlice';
 import ChatInput from '../chatinput/ChatInput';
+import { db } from '../firebase/firebase';
+import { useCollection } from 'react-firebase-hooks/firestore';
 
 function Chat() {
    const roomId = useSelector(selectroomId)
-
+   const [ roomDetails] = useCollection(roomId && db.collection("rooms").doc(roomId))
     return (
         <ChatContainer>
 
