@@ -12,8 +12,9 @@ function Message({ message , timestamp , user, userImage }) {
             <MessageInfo>
                 <h4>
                     {user}{" "}
-                    <span></span>
+                    <span>{new Date(timestamp?.toDate()).toUTCString()}</span>
                 </h4>
+                <p>{message}</p>
             </MessageInfo>
         </MessageContainer>
     )
@@ -22,7 +23,14 @@ function Message({ message , timestamp , user, userImage }) {
 export default Message;
 
 const MessageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 20px;
 
+  > img {
+      height: 50px;
+      border-radius: 8px;
+  }
 `;
 
 const MessageInfo = styled.div`
